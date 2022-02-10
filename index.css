@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    background: url('fondo1.jpg') no-repeat fixed;
+    
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+    background-color: rgb(226, 53, 23);
+    height: 60px;
+}
+
+.logo {
+    font-family: 'Rock Salt', cursive;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    margin: 0 20px;
+    width: max-content;
+    text-align: center;
+    line-height: 60px;    
+}
+
+.lista {
+    display: flex;
+    padding: 0;
+    list-style: none;
+}
+
+.lista-items {
+    padding: 0 12px;
+    text-align: center;
+    line-height: 60px;
+    transition: 0.2s;
+    
+}
+
+.enlaces {
+    color: rgb(233, 175, 156);
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    
+}
+
+
+.icono {
+    display: none;
+    background: none;
+    /*margin-right: 20px;*/
+    border: none;
+    color: darksalmon;
+    cursor: pointer;
+}
+
+.lista-items:hover {
+    background-color: rgb(110, 21, 5);  
+    padding-bottom: 10px;
+    padding-top: 10px;
+    
+}
+
+.enlaces:hover {
+    align-content: center;
+    color: white;
+    line-height: 60px;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        overflow: hidden;
+    }
+
+    .icono {
+        display: block;
+        position: absolute;
+        top: 18px;
+        right: 20px;
+    }
+
+    .nav {
+        flex-direction: column;
+    }
+
+    .lista {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    .enlaces {
+        justify-content: space-around;
+        align-items: center;
+        height: calc(100%-60px);
+        padding: 0;
+        margin: 0;
+        
+    }
+
+}
+
+.enlaces.activado {
+    display: flex;
+    color: rgb(110, 21, 5);
+}
+
+
+
